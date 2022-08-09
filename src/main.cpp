@@ -14,6 +14,9 @@ Evas_Object *layout = NULL;
 
 int elm_main(int argc EINA_UNUSED, char **argv EINA_UNUSED)
 {
+    //Setup exit policy
+    elm_policy_set(ELM_POLICY_QUIT, ELM_POLICY_QUIT_LAST_WINDOW_CLOSED);
+
     win = elm_win_util_standard_add("win-example", "Elm_Win Example");
     elm_win_focus_highlight_enabled_set(win, EINA_TRUE);
     evas_object_resize(win, 400, 400);
